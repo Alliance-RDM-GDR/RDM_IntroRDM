@@ -1,69 +1,379 @@
 ---
-title: "Introduction to research data management"
-author: Daniel Manrique-Castano, Ph.D
+title: "Principles of Research Data Management (RMD)"
+subtitle: "A primer for researchers"
+
+author: 
+  - name: Daniel Manrique-Castano, Ph.D
+    email: daniel.manrique-castano@alliancecan.ca
+    affiliations:
+      - name: Digital Research Alliance of Canada
+
+date: last-modified
+date-format: full
+
 format: 
   html:
     embed-resources: true
+    mermaid:
+      theme: forest
+      
   revealjs:
-    footer: "RDM training - Daniel Manrique-Castano, Ph.D"
-    logo: alliance_logo.png
+    footer: "Principles of Research Data Management (RMD) - Daniel Manrique-Castano, Ph.D"
+    logo: "images/alliance_logo.png"
     theme: white
     transition: fade
     slide-number: true
     show-slide-number: all
     preview-links: auto
+    mermaid:
+      theme: forest
+      mermaid-format: svg
+    
+filters:
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+  
+  gfm:
+    mermaid-format: svg
+
+engine: knitr
 
 css: styles.css
-
 bibliography: references.bib 
+editor: source
 ---
 
-## We face a reproducibility/ethical crisis {style="text-align: center;"}
+# What is Research Data Management (RDM)?
 
-![Reports on the reproducibility crisis](images/crisis1.png){fig-align="center"}
+## What is Research Data Management (RDM)?{.center}
+
+[RDM]{style="color:green;"} consist in the organization/handling, storage, sharing and preservation of research data. This can include physical objects/files, documents, images, audio, digital databases, etc.
+
+# RDM in context
+
+## Tri-Agency Research Data Management Policy{.center} 
+
+The [Goverment of Canada](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management) propels RDM in its [Tri-Agency Research Data Management Policy](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions).
+
+Through its federal funding agencies, the canadian government seeks to implement [data management plans (DMPs)]{style="text-decoration: underline;"} and [sharing]{style="text-decoration: underline;"} of research data to maximize benefits to society. 
+
+
+## Sciences faces a reproducibility/ethical crisis{.center} 
+
+::: {style="text-align: center; font-size: 70%"}
+![Reports on the reproducibility crisis](images/crisis1.png){fig-align="center" width="1200" height="500"}
+:::
 
 ## Some well-known causes
 
+::: {style="text-align: center; font-size: 70%"}
 ![Causes of the reproducibility crisis](images/crisis.png){fig-align="center"}
-
-## Research Data Management (RDM)
-
-RDM consist in the organization/handling, storage, sharing and (short-long term) preservation of research data. This can include physical objects/files, documents, images, audio, etc.
-
-![Image by https://datadryad.org/](images/dataset-structure.jpg){fig-align="center"}
-
-## Why RDM is important?
-
-### From a researchers perspective
-
--   Managing data correctly makes your data usable/reusable (for you and others).
--   Ensure the fidelity and and encourages validation of your research.
--   Improve your efficiency and that of your research team.
--   Upholds the professional/ethical commitment to research integrity.
-
-## Why RDM is important?
-
-### From a social/legal perspective
-
--   Funding agencies require data management plans (DMPs) and open sharing of data to maximaze benefits to society. [Tri-Agency Research Data Management Policy](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions)
--   Hopefully, in a few years the deposit of raw data and analysis codes will be a requirement of scientific journals.
--   Help to build trust in the scientific endeavor through transparent open science practices.
-
-## In summary...
-
-RDM is a matter of professional responsibility, ethical behavior, and commitment to best scientific practices.
-
-## FAIR principles {style="text-align: center;"}
-
-![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align="center" width="500" height="250"}
-
-::: r-fit-text
--   **Findable:** All data must carry identifiers and metadata that facilitate its discovery.
--   **Accessible:** The community should be able to access your data.
--   **Interoperable:** The data must comply with specific standards (i.e. standardized vocabularies) and formats (i.e. .csv, .tif).\
--   **Reusable:** The data must be sufficiently described (and licensed) to allow its reuse by the community.
 :::
 
-## Research project life cycle {style="text-align: center;"}
+## Research needs to move towards:{.center} 
 
-![Image by SZF TU Berlin](images/DataCycle.webp){fig-align="center" width="700" height="500"}
+- [Competent]{style="color:green;"} researchers in [RDM]{style="text-decoration: underline;"} and data analysis.
+- [Standardized approaches]{style="color:green;"} to [share]{style="text-decoration: underline;"} raw data and analysis code to support research findings.
+- Researchers with a [commitment to transparency]{style="color:green;"} and best scientific practice as a guarantee of [research integrity]{style="text-decoration: underline;"}.
+
+## In summary...{.center} 
+
+Think about RDM competences as a matter of professional responsibility, ethical behavior, and commitment to best scientific practices.
+
+# Understanding RDM
+
+## {.center} 
+
+::: {style="text-align: center; font-size: 70%"}
+![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align="center" width="700" height="350"}
+:::
+
+## {.center} 
+
+::: {style="text-align: left;font-size: 80%"}
+{{< bi search>}} [**Findable:**]{style="color:green;"} Data with [identifiers and metadata]{style="text-decoration: underline;"} that facilitate its discovery.
+
+{{< bi unlock>}} [**Accessible:**]{style="color:orange;"} To the community and research under clear [permissions]{style="text-decoration: underline;"} (i.e [Creative Commons Licenses](https://creativecommons.org/share-your-work/cclicenses/)).
+
+{{< bi upc-scan>}} [**Interoperable:**]{style="color:blue;"} Data complying with [specific standards]{style="text-decoration: underline;"} (i.e. standardized vocabularies) and [formats]{style="text-decoration: underline;"} (i.e. CSV, TIFF).
+
+{{< bi recycle>}} [**Reusable:**]{style="color:magenta;"} Data [sufficiently described]{style="text-decoration: underline;"} (and licensed) to allow reuse by interested parties.
+:::
+
+::: callout-tip
+Find additional information and guides [here](https://www.go-fair.org/fair-principles/)
+:::
+
+## Research project life cycle{.center} 
+
+::: {style="text-align: center; font-size: 70%"}
+![Image by SZF TU Berlin](images/DataCycle.webp){fig-align="center" width="600" height="400"}
+:::
+
+
+# Research project life cycle
+
+## Planning phase{.center}
+
+:::: {style="text-align: left;font-size: 70%"}
+Planning entails [clear prospects]{style="color:green;"} about how researchers will [manage, store, and share]{style="text-decoration: underline;"} their data. This step can include:  
+
+{{< bi clipboard-data>}} **Identifying data needs:** Determine which [kind of data]{style="text-decoration: underline;"} is necessary or available to answer the research question.  
+
+{{< bi file-earmark-text>}} **Create a data management plan (DMP):** Outlines how data will be [collected, documented, and preserved]{style="text-decoration: underline;"}, file formats, suitable [metadata standards]{style="text-decoration: underline;"}, and long-term data [sharing and storage]{style="text-decoration: underline;"}. 
+
+::: callout-tip
+The [DMP Assistant](https://alliancecan.ca/en/services/research-data-management/dmp-assistant) from the [Digital Research Alliance of Canada]{style="color:gold;"} is an example of a DMP tool. 
+:::
+
+{{< bi file-person>}} **Ethical considerations:** Address any ethical requirements related to data [privacy, consent, and security]{style="text-decoration: underline;"}.
+::::
+
+## Collection phase{.center}
+
+:::: {style="text-align: left;font-size: 80%"}
+Researchers focus on [gathering research data]{style="text-decoration: underline;"} from:
+
+- **Experiments:** laboratory procedures or clinical trials.
+
+- **Fieldwork:** poblational surveys or environmental measurements.
+
+- **Existing datasets:** secondary data from repositories or historical archives). 
+
+::: callout-tip
+Define standards for data collection to ensure its accuracy and reliability.
+:::
+::::
+
+
+## Storing phase {.center}
+
+:::: {style="text-align: left;font-size: 80%"}
+Appropriate storage of research data to prevent loss, corruption, or unauthorized access. Some [best practices]{style="color:green;"} include:
+
+{{< bi database>}} **Systematic Backups:** Having [multiple copies]{style="color:green;"} of the data in different physical and digital locations.
+
+{{< bi file-lock2>}} **Security:** Sensitive data must be [protected]{style="color:green;"} for unauthorized access by encrypting files or restricting access to authorized personnel.
+
+{{< bi bar-chart-steps>}} **File organization:** Adequate and consistent [naming conventions]{style="color:green;"} to facilitate location and understanding of datasets.
+::::
+
+
+## {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+:::{style="text-align: left;font-size: 80%"}
+For example, [TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is [systemic template]{style="color:green;"} to standardize a suitable folder structure for research data. Download the template  [here](https://github.com/Alliance-RDM-GDR/RDM_IntroRDM/tree/main/resources).
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/tier.png){width="35%"}
+:::
+::::
+:::::
+
+## Analyze phase{.center}
+
+:::: {style="text-align: left;font-size: 80%"}
+Analyzing data to draw scientific conclusions. This may include:
+
+{{< bi clipboard-data>}} **Data cleaning:** Using [reproducible workflows]{style="color:green;"} to handle and clean data, removing possible errors, duplicates, and inconsistencies.
+
+{{< bi code-square>}} **Statistical analysis:** Use theoretically motivated [statistical models]{style="color:green;"} to perform scientific inference and identify patterns or relationships in the data. 
+
+{{< bi image>}} **Visualization:** Creating visualizations to [showcase scientific results]{style="color:green;"}.
+
+::::
+
+::: callout-tip
+Approximations using open source [Jupyter](https://jupyter.org/) (Python) or [Quarto](https://quarto.org/) (R and Python) notebooks are recommended for replication purposes.
+:::
+
+## Partners to handle analysis pipelines{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+### {{< bi code-square>}} R-studio/Quarto (R + Python)
+::: {style="text-align: center;font-size: 100%"} 
+![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+### {{< bi github>}} GitHub (Version control)
+::: {style="text-align: center;font-size: 100%"} 
+![GitHub screen](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+:::::
+
+
+## With R-studio (R and Python) you can {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+### {{< bi code-square>}} R-studio/Quarto (R + Python)
+::: {style="text-align: center;font-size: 100%"} 
+![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 75%"}
+- {{< bi file-earmark-spreadsheet-fill>}} Handle [data tables and variables](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_10x_ROIs_CD31-Pdgfrb_Coloc.qmd) using the R [Tidyverse](https://www.tidyverse.org/).  
+
+- {{< bi images>}} Analyze [images](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Confocal_40x_ROIs_Pdgfrb_Morpho_BatchScript.qmd) using Python [skimage](https://scikit-image.org/). 
+
+- {{< bi wallet-fill>}} Process [Flow cytometry](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/FlowCytometry_Pdgfrb_Processing.qmd) files/data using R [FlowCore](https://bioconductor.org/packages/release/bioc/html/flowCore.html) from [BioConductor](https://bioconductor.org/).
+
+- {{< bi bandaid>}} Analyze [RNS-seq](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) data using R [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) from [BioConductor](https://bioconductor.org/).
+
+- {{< bi bar-chart-line-fill>}} Perform state-of-the-art [statistical modeling](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_5x_Ipsilateral_Gfap_IntDen.qmd) using [brms](https://paulbuerkner.com/brms/).
+
+- And all other things you can imagine...
+:::
+::::
+:::::
+
+
+## Description pahse{.center} 
+
+::: {style="text-align: left;font-size: 80%"}
+Document the [content of the dataset]{style="text-decoration: underline;"} to make it easier to [understand and reuse]{style="text-decoration: underline;"}. This comprises the generation of a readme file containing [Metadata]{style="color:green;"} schemes (information about the data).
+:::
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center; font-size: 50%"}
+![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="700" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="font-size: 70%;"}
+There are templates/resources to guide the generation of readme files:
+
+- [Creating a README file](https://blog.datadryad.org/2023/10/18/for-authors-creating-a-readme-for-rapid-data-publication/)
+
+- FRDR readme file [template](https://www.frdr-dfdr.ca/docs/txt/README.txt).
+
+- [Readme.so](https://readme.so/)
+
+- [Readme.ai](https://readme-ai.streamlit.app/)
+:::
+::::
+:::::
+
+
+## Contents of a readme file
+
+:::{.r-fit-text}
+Generally, a dataset readme file showcases:
+
+-   {{< bi database-fill >}} [Dataset identifier]{style="color:green;"} showing information such as title, authors, data collection date, Geographic information.
+-   {{< bi folder-fill >}} A [map of files/folders]{style="color:green;"} defining the content and hierarchy of folders and subfolders, together with naming conventions.
+-   {{< bi gear-fill >}} [Methodological information]{style="color:green;"} showcasing methods for data collection/generation, analysis, and experimental conditions.
+
+-   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproduce research pipelines.
+
+-   {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use.
+:::
+
+::: {.callout-caution collapse="true"}
+## Please note
+A dataset is a [standalone object]{style="text-decoration: underline;"}. Methodological information [MUST NOT]{style="color:red;"} be relegated to associated research articles.
+:::
+
+
+## Archive and Sharing{.center} 
+
+::: {style="text-align: left;font-size: 90%"}
+Archiving and sharing research data involves its preservation for the long term in trusted data repositories. This the data is:
+
+{{< bi search>}} **Accessible:** Data is [findable and accessible]{style="color:green;"} for reuse.
+
+{{< bi database>}} **Preserved:** To [prevent data loss]{style="color:green;"} due to software or hardware obsolescence. Repositories have systematic process to ensure that data is always accessible.
+
+{{< bi safe2>}} **Licensed:** to define how others can [use the data]{style="color:green;"}.
+
+{{< bi link-45deg>}} **Cited:** with [DOI]{style="color:green;"} or other related unique identifiers.
+:::
+
+
+## Sharing data (in repositories){.center}
+
+::: {style="text-align: left;font-size: 80%"}
+When you share data, [make sure]{style="color:green;"} it meets these characteristics:
+
+1.  {{< bi diagram-2-fill >}} [Folders and files]{style="color:green;"} are organized in a [structured way]{style="text-decoration: underline;"}: Use [standardized file formats]{style="color:green;"} (e.g., CSV, TIFF) and check for consistency in [naming conventions]{style="color:green;"}.
+
+2.  {{< bi file-earmark-text-fill >}} [The metadata/readme]{style="color:green;"} allow the understanding of the dataset as standalone object, providing data [collection methods, processing steps, and relevant context]{style="text-decoration: underline;"}.
+
+3.  {{< bi code-square >}} It is [desirable]{style="color:green;"} that it contains reproducible workflows used to process and generate the [research results]{style="text-decoration: underline;"}.
+:::
+
+## In summary {.center}
+
+Be aware that the dataset is a research object to [serve the public and the scientific community]{style="color:green;"}, and that can be used (and cited) [independently]{style="color:green;"} of the research article.
+
+## Why not? {.center}  
+Think about research articles as supplements to your dataset!!!
+
+
+## Reuse
+
+::: {style="text-align: left;font-size: 80%"}
+Researchers and the public can reuse data to:
+
+-   **Validate research findings:** [Independent verification]{style="color:green;"} of scientific results and conclusions (by reproducing research workflows).
+
+-   **Repurpose data:** Use the data for [new research questions]{style="color:green;"} or in combination with other datasets. They are extremely valuable as [educational resources]{style="color:green;"}.
+
+-   **Build upon previous work:** to [accelerate scientific discovery]{style="color:green;"} and meta analysis by avoiding duplication of efforts or relying on [irreproducible research]{style="color:red;"}.  
+:::
+
+::: callout-tip
+## Discovering services
+Use portals like [FRDR](https://www.frdr-dfdr.ca/repo/) or [Lunaris](https://www.lunaris.ca/) to discover and reuse research data.
+:::   
+
+## Research project life cycle{.center} 
+
+::: {style="text-align: center; font-size: 70%"}
+![Image by SZF TU Berlin](images/DataCycle.webp){fig-align="center" width="600" height="400"}
+:::
+
+
+## Find more supporting material{.center}
+
+-   FRDR [guide](https://www.frdr-dfdr.ca/docs/en/depositing_data/) for deposit research data.
+-   Guidance on depositing existing data in [public repositories](https://ethics.gc.ca/eng/depositing_depots.html) 
+-   [RDMkit](https://rdmkit.elixir-europe.org/sharing)
+
+::::: {layout-ncol="2" layout-valign="center"}
+::::{#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![](images/frdr-logo-english-first.png){width="90%"}
+:::
+::::
+
+::::{#second-column}
+::: {style="text-align: left;font-size: 80%"}
+
+Visit us at 
+
+https://www.frdr-dfdr.ca/repo/ 
+
+or [contact us](https://www.frdr-dfdr.ca/repo/contactus)
+
+:::
+::::
+:::::
+
